@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/Realm2Bot.jar Realm2Bot.jar
+ADD target/viber-bot-0.0.1-SNAPSHOT.jar viber-bot-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","Realm2Bot.jar"]
+ENTRYPOINT ["java","-jar","viber-bot-0.0.1-SNAPSHOT.jar"]
