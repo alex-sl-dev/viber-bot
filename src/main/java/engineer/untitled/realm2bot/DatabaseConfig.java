@@ -5,8 +5,10 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
+@EnableTransactionManagement
 public class DatabaseConfig {
 	@Bean
 	public DataSource dataSource() {
@@ -17,6 +19,7 @@ public class DatabaseConfig {
 		dataSource.setUrl("jdbc:postgresql://database-2.cbqhfgkldg4a.eu-west-1.rds.amazonaws.com:5432/postgres?set=UTF-8");
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("orfgo58YTMABVgr9TuDa");
+		//dataSource.setConnectionProperties();
 
 		return dataSource;
 	}
