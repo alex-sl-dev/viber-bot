@@ -15,8 +15,11 @@ public class LanguageServiceImpl implements LanguageService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(LanguageServiceImpl.class);
 
-	@Autowired
 	LanguageDao languageDao;
+
+	public LanguageServiceImpl(LanguageDao languageDao) {
+	    this.languageDao = languageDao;
+	}
 
 	@Override
 	public List<Language> getAllLanguages() {
